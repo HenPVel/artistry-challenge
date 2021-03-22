@@ -1,0 +1,22 @@
+<h1><%= @artist.name.upcase %></h1>
+
+<h3>Artist Age:</h3>
+<p><%= @artist.age %></p>
+
+<h3>Title:</h3>
+<p><%= @artist.title %></p>
+
+<h3>Artists Instruments:</h3>
+<% if @artist.instruments.length > 0%>
+    <% @artist.instruments.each do |i|%>
+    <ul>
+        <li><%= i.name %>, <%= i.classification %></li>
+    </ul>
+    <% end %>
+
+<% else %>
+<h4>Artist Currently Plays No Instruments</h4>
+
+<% end %>
+
+
