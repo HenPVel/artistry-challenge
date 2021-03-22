@@ -8,7 +8,7 @@
 
 <h3>Artists Instruments:</h3>
 <% if @artist.instruments.length > 0%>
-    <% @artist.instruments.each do |i|%>
+    <% @artist.instruments.uniq.each do |i|%>
     <ul>
         <li><%= i.name %>, <%= i.classification %></li>
     </ul>

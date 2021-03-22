@@ -1,0 +1,11 @@
+<h1>Artists and their Musical Talents</h1>
+
+<% @relationships.uniq{|rel| [rel.artist_id] }
+.each do |r| %>
+    
+    <p><%= r.artist.name %></p>
+    <% r.artist.instruments.uniq.each do |i|%>
+    <li><%=i.name%></li>
+    <%end%>
+    </ul>
+<% end %>
